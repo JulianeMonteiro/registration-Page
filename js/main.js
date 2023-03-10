@@ -54,8 +54,8 @@ const saveClient = () => {
       email: document.getElementById("email").value,
       celular: document.getElementById("celular").value,
       endereco: document.getElementById("endereco").value,
-      numero: document.getElementById("numero").value,
       cidade: document.getElementById("cidade").value,
+      estado: document.getElementById("estado").value,
     };
     const index = document.getElementById("nome").dataset.index;
     if (index == "new") {
@@ -77,11 +77,11 @@ const createRow = (client, index) => {
         <td>${client.email}</td>
         <td>${client.celular}</td>
         <td>${client.endereco}</td>
-        <td>${client.numero}</td>
         <td>${client.cidade}</td>
+        <td>${client.estado}</td>
         <td>
-            <button type="button" class="button green" id="edit-${index}">Editar</button>
-            <button type="button" class="button red" id="delete-${index}" >Excluir</button>
+            <button type="button" class="button edit" id="edit-${index}">Editar</button>
+            <button type="button" class="button delete" id="delete-${index}" >Excluir</button>
         </td>
     `;
   document.querySelector("#tableClient>tbody").appendChild(newRow);
@@ -103,8 +103,8 @@ const fillFields = (client) => {
   document.getElementById("email").value = client.email;
   document.getElementById("celular").value = client.celular;
   document.getElementById("endereco").value = client.endereco;
-  document.getElementById("numero").value = client.numero;
   document.getElementById("cidade").value = client.cidade;
+  document.getElementById("estado").value = client.estado;
   document.getElementById("nome").dataset.index = client.index;
 };
 
@@ -127,7 +127,7 @@ const editDelete = (event) => {
     } else {
       const client = readClient()[index];
       const response = confirm(
-        `Deseja realmente excluir o cliente ${client.nome}`
+        `Deseja realmente excluir o cliente ${client.nome} ?`
       );
       if (response) {
         deleteClient(index);
