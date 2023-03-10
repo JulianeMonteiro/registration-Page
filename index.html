@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro de Clientes</title>
-    <link rel="stylesheet" href="/build/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&family=MonteCarlo&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/main.css" />
+
+    <title>CRUD</title>
   </head>
+
   <body>
     <header>
       <h1 class="header-title">Cadastro de Clientes</h1>
@@ -48,17 +58,16 @@
               type="email"
               id="email"
               class="modal-field"
-              placeholder="E-mail"
+              placeholder="E-mail do Cliente"
               required
             />
             <input
               type="text"
               id="celular"
               class="modal-field"
-              placeholder="Celular"
+              placeholder="Celular do Cliente"
               required
-            />
-            <input
+            /><input
               type="text"
               id="endereco"
               class="modal-field"
@@ -67,16 +76,17 @@
             />
             <input
               type="text"
-              id="endereco"
+              id="numero"
               class="modal-field"
               placeholder="Número"
               required
             />
+
             <input
               type="text"
               id="cidade"
               class="modal-field"
-              placeholder="Cidade"
+              placeholder="Cidade do Cliente"
               required
             />
           </form>
@@ -87,5 +97,7 @@
         </div>
       </div>
     </main>
+    <footer></footer>
+    <script src="/js/main.js"></script>
   </body>
 </html>
